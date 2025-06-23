@@ -6,12 +6,12 @@ import {
 } from './styles'
 
 type Props = {
-  title: string
-  description: string
-  image: string
+  nome: string
+  descricao: string
+  foto: string
 }
 
-const ProductItem = ({ image, title, description }: Props) => {
+const ProductItem = ({ nome, descricao, foto }: Props) => {
   const getDescription = (d: string) => {
     if (d.length > 216) {
       return d.slice(0, 216) + '...'
@@ -21,9 +21,9 @@ const ProductItem = ({ image, title, description }: Props) => {
   }
   return (
     <>
-      <ProductImage src={image} />
-      <ProductTitle>{title}</ProductTitle>
-      <ProductDescription>{getDescription(description)}</ProductDescription>
+      <ProductImage src={foto} />
+      <ProductTitle>{nome}</ProductTitle>
+      <ProductDescription>{getDescription(descricao)}</ProductDescription>
       <AddProduct>Adicionar ao carrinho</AddProduct>
     </>
   )

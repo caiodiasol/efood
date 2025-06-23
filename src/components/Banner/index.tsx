@@ -1,4 +1,3 @@
-import RestaurantModel from '../../models/RestaurantModels'
 import Container from '../../styles/container'
 import {
   RestaurantCategory,
@@ -7,17 +6,17 @@ import {
 } from './styles'
 
 type Props = {
-  restaurant: RestaurantModel
+  capa: string
+  titulo: string
+  tipo: string
 }
 
-const Banner = ({ restaurant }: Props) => {
+const Banner = ({ capa, titulo, tipo }: Props) => {
   return (
-    <RestaurantProfile
-      style={{ backgroundImage: `url('${restaurant.image}')` }}
-    >
+    <RestaurantProfile style={{ backgroundImage: `url('${capa}')` }}>
       <Container>
-        <RestaurantCategory>Italian</RestaurantCategory>
-        <RestaurantTitle>La Dolce Vita Trattoria</RestaurantTitle>
+        <RestaurantCategory>{tipo}</RestaurantCategory>
+        <RestaurantTitle>{titulo}</RestaurantTitle>
       </Container>
     </RestaurantProfile>
   )
