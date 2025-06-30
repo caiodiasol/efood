@@ -26,6 +26,10 @@ export const RestaurantCategory = styled.h2`
   margin-top: 32px;
   font-sizi: 32px;
   font-weight: lighter;
+
+  @media (max-width: 798px) {
+    left: 50px;
+  }
 `
 
 export const RestaurantTitle = styled.h1`
@@ -33,4 +37,8 @@ export const RestaurantTitle = styled.h1`
   bottom: 0;
   font-sizi: 32px;
   margin-bottom: 32px;
+
+  @media (max-width: 798px) {
+    left: 50px;
+  }
 `

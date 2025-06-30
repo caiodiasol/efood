@@ -11,10 +11,12 @@ type Product = {
 
 type CartState = {
   itens: Product[]
+  isOpen: boolean
 }
 
 const initialState: CartState = {
-  itens: []
+  itens: [],
+  isOpen: false
 }
 
 const cartSlice = createSlice({
@@ -22,15 +24,24 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     add: (state, action: PayloadAction<Product>) => {
-      alert(`${action.payload.nome} adicionado no carrinho!`)
-      state.itens.push(action.payload)
+      const product = state.itens.find((i) => i.id === action.payload.id)
+      if (!product) {
+        state.itens.push(action.payload)
+      } else {
+        alert('O produto já está no carrinho!')
+      }
     },
-    reset: (state) => {
-      alert('Carrinho resetado')
-      state.itens = []
+    open: (state) => {
+      state.isOpen = true
+    },
+    close: (state) => {
+      state.isOpen = false
+    },
+    remove: (state, action: PayloadAction<number>) => {
+      state.itens = state.itens.filter((i) => i.id !== action.payload)
     }
   }
 })
 
-export const { add, reset } = cartSlice.actions
+export const { add, open, close, remove } = cartSlice.actions
 export default cartSlice.reducer

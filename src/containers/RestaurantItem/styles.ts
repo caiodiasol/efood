@@ -10,8 +10,10 @@ export const Card = styled.div`
 `
 
 export const Image = styled.img`
-  max-width: 100%;
+  display: block;
   width: 100%;
+  height: 216px;
+  object-fit: cover;
 `
 
 export const Categories = styled.ul`
@@ -19,15 +21,19 @@ export const Categories = styled.ul`
   display: flex;
   margin: 16px;
   right: 0;
-`
 
-export const Category = styled.li`
-  background-color: ${colors._primary};
-  color: ${colors._secundary};
-  margin-left: 8px;
-  padding: 6px 4px;
-  font-size: 12px;
-  font-weight: bold;
+  li {
+    background-color: ${colors._primary};
+    color: ${colors._secundary};
+    margin-left: 8px;
+    padding: 6px 4px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .destaqueOff {
+    display: none;
+  }
 `
 
 export const ContainerRes = styled.div`
@@ -70,4 +76,5 @@ export const MoreLink = styled(Link)`
   padding: 4px 6px;
   display: inline-block;
   bottom: 0;
+  cursor: pointer;
 `

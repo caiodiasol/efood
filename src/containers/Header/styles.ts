@@ -21,7 +21,7 @@ export const HeaderContainer = styled.div`
   font-weight: bold;
   font-size: 18px;
 
-  @media (max-width: 625px) {
+  @media (max-width: 798px) {
     display: block;
     text-align: center;
   }
@@ -32,18 +32,24 @@ export const Left = styled(Link)`
   color: ${colors._primary};
   left: 0;
 
-  @media (max-width: 625px) {
+  @media (max-width: 798px) {
     position: static;
     display: block;
   }
 `
-export const Right = styled(Link)`
+export const Right = styled.button`
   position: absolute;
   color: ${colors._primary};
   right: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
 
-  @media (max-width: 625px) {
-    position: static;
+  @media (max-width: 798px) {
     display: block;
+    position: static;
+    margin: 0 auto;
   }
 `
