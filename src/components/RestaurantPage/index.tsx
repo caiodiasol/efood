@@ -5,8 +5,7 @@ import ProductItem from '../../containers/ProductItem'
 import Container from '../../styles/container'
 import { Modal, ProductList, RestaurantSection, ModalContent } from './styles'
 
-import close from '../../assets/images/close 1.png'
-import { add } from '../../store/reducers/cart'
+import { add, open } from '../../store/reducers/cart'
 
 type Props = {
   cardapio: [
@@ -34,6 +33,10 @@ type ModalState = {
 const RestaurantPage = ({ cardapio }: Props) => {
   const dispatch = useDispatch()
 
+  const openCart = () => {
+    dispatch(open())
+  }
+
   const [modal, setModal] = useState<ModalState>({
     isVisible: false,
     descricao: '',
@@ -54,6 +57,17 @@ const RestaurantPage = ({ cardapio }: Props) => {
       preco: 0,
       porcao: ''
     })
+  }
+
+  const addToCart = (m: {
+    foto: string
+    preco: number
+    id: number
+    nome: string
+    descricao: string
+    porcao: string
+  }) => {
+    dispatch(add(m))
   }
 
   const priceFormat = () => {
@@ -97,7 +111,7 @@ const RestaurantPage = ({ cardapio }: Props) => {
       <Modal className={modal.isVisible ? 'visible' : ''}>
         <ModalContent>
           <header>
-            <img src={close} onClick={closeModal} alt="Fechar" />
+            <button onClick={closeModal} />
           </header>
           <div>
             <img src={modal.foto} alt="Pizza Marguerita" />
@@ -109,7 +123,8 @@ const RestaurantPage = ({ cardapio }: Props) => {
               <button
                 onClick={() => {
                   closeModal()
-                  dispatch(add(modal))
+                  addToCart(modal)
+                  openCart()
                 }}
               >
                 Adicionar ao carrinho - {priceFormat()}

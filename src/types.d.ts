@@ -1,4 +1,4 @@
-export type Restaurant = {
+declare type Restaurant = {
   id: number
   titulo: string
   destacado: boolean

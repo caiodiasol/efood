@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import colors from '../../styles/colors'
 
+import close from '../../assets/images/close 1.png'
+
 export const RestaurantSection = styled.section`
   background-color: ${colors._background};
 `
@@ -22,8 +24,10 @@ export const ProductList = styled.ul`
     column-gap: 2.34%;
   }
 
-  @media (max-width: 426px) {
+  @media (max-width: 798px) {
     display: block;
+    max-width: 500px;
+    margin: 0 auto;
   }
 `
 
@@ -35,7 +39,7 @@ export const Modal = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: none;
   flex-direction: column;
   align-items: center;
@@ -46,7 +50,7 @@ export const Modal = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
   }
 `
@@ -58,24 +62,44 @@ export const ModalContent = styled.div`
   background-color: ${colors._primary};
   padding: 32px;
 
-  header img {
+  header button {
+    background-image: url(${close});
+    background-size: cover;
+    background-color: transparent;
+    background-position: center;
     position: absolute;
-    top: 8px;
     right: 8px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    border: none;
     cursor: pointer;
+    outline: none;
   }
 
   > div {
     display: flex;
+    @media (max-width: 768px) {
+      display: block;
+    }
 
     img {
       width: 280px;
       height: 280px;
       object-fit: cover;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        height: 200px;
+      }
     }
 
     div {
       margin-left: 24px;
+
+      @media (max-width: 768px) {
+        margin-left: 0;
+      }
 
       h4 {
         font-size: 18px;

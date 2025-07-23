@@ -4,13 +4,15 @@ import { useParams } from 'react-router-dom'
 import Header from '../containers/Header'
 import RestaurantPage from '../components/RestaurantPage'
 import Banner from '../components/Banner'
-import { Loading } from '../styles/loading'
+
+import Modal from '../containers/Modal'
+import Loader from '../containers/Loader'
 
 const Profile = () => {
   const { id } = useParams<{ id: string }>()
 
   const { data: restaurants, isLoading } = useGetRestaurantsQuery()
-  if (isLoading) return <Loading>Carregando...</Loading>
+  if (isLoading) return <Loader />
 
   const restaurant = restaurants?.find((r) => r.id === Number(id))
 
@@ -27,6 +29,7 @@ const Profile = () => {
         titulo={restaurant.titulo}
       />
       <RestaurantPage cardapio={restaurant.cardapio} />
+      <Modal />
     </>
   )
 }
