@@ -29,8 +29,6 @@ Este projeto é uma aplicação de delivery de comida desenvolvida com ReactJS e
 
 ## 🌐 Demonstração - [Link para o Projeto Online](https://efood-murex-sigma.vercel.app/)
 
----
-
 ## 💡 Aprendizados
 
 Neste projeto, aprofundei meus conhecimentos em:
