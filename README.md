@@ -29,10 +29,6 @@ Este projeto é uma aplicação de delivery de comida desenvolvida com ReactJS e
 
 ## 🌐 Demonstração - [Link para o Projeto Online](https://efood-murex-sigma.vercel.app/)
 
-![Preview do Efood](/assets/efood_print.png)
-
-*As imagens acima mostram a interface da aplicação de delivery de comida Efood.*
-
 ---
 
 ## 💡 Aprendizados
