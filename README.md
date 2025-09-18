@@ -49,7 +49,7 @@ Para rodar a aplicação "Efood" em seu ambiente local, siga estes passos:
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/l3l3z1nh4/efood.git
+git clone https://github.com/caiodiasol/efood.git
 
 # 2. Acesse a pasta do projeto
 cd efood
