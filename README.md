@@ -1,46 +1,61 @@
-# Getting Started with Create React App
+# Efood - Delivery de Comida
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma aplicação de delivery de comida desenvolvida com ReactJS e TypeScript. O objetivo principal é fornecer uma plataforma onde os usuários podem explorar restaurantes, visualizar menus, fazer pedidos e gerenciar suas compras de forma intuitiva. Este projeto foi desenvolvido como o projeto final do curso da EBAC.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔍 Visão Geral
 
-### `npm start`
+- **Status**: Concluído
+- **Tecnologias**: ReactJS, TypeScript, CSS, API REST
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## ⚙️ Funcionalidades
 
-### `npm test`
+- **Exploração de Restaurantes**: Os usuários podem navegar por uma lista de restaurantes disponíveis, com informações detalhadas sobre cada um, incluindo nome, localização e avaliações.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Visualização de Menus**: Cada restaurante possui um menu que exibe os pratos disponíveis, com descrições e preços, permitindo que os usuários escolham o que desejam pedir.
 
-### `npm run build`
+- **Carrinho de Compras**: Os usuários podem adicionar itens ao carrinho, visualizar o total da compra e remover itens, facilitando a gestão dos pedidos antes da finalização.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Integração com API**: A aplicação se comunica com uma API REST para obter dados dinâmicos sobre restaurantes e menus, garantindo que as informações estejam sempre atualizadas.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Finalização de Pedidos**: Os usuários podem finalizar seus pedidos de forma simples, com um fluxo de checkout que inclui a confirmação do pedido e opções de pagamento.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Interface Responsiva**: O design é responsivo, garantindo uma boa experiência de uso em dispositivos móveis e desktops.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🌐 Demonstração - [Link para o Projeto Online](https://efoodbeta.vercel.app/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 💡 Aprendizados
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Neste projeto, aprofundei meus conhecimentos em:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **Desenvolvimento com ReactJS e TypeScript**: Aprendizado sobre a criação de componentes, gerenciamento de estado e tipagem estática com TypeScript.
 
-## Learn More
+- **Integração com APIs**: Implementação de chamadas a APIs REST para obter dados dinâmicos, melhorando a interatividade e a experiência do usuário.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Design de Interfaces de E-commerce**: Conceitos de design e usabilidade aplicados a aplicações de delivery, focando na experiência do usuário durante a navegação e finalização de pedidos.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Gerenciamento de Estado**: Uso de hooks do React para gerenciar o estado da aplicação de forma eficiente, especialmente no que diz respeito ao carrinho de compras.
+
+---
+
+## 📦 Instalação e Uso
+
+Para rodar a aplicação "Efood" em seu ambiente local, siga estes passos:
+
+```bash
+# 1. Clone o repositório
+git clone https://github.com/caiodiasol/efood.git
+
+# 2. Acesse a pasta do projeto
+cd efood
+
+# 3. Instale as dependências
+npm install
+
+# 4. Compile e inicie o servidor de desenvolvimento
+npm start
